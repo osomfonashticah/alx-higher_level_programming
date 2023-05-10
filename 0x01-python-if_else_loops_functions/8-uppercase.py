@@ -1,6 +1,13 @@
 #!/usr/bin/python3
-def uppercase(str):
-    if ord(str) > 64:
-        return True
+def conversion(char):
+    if ord(char) >= 97 and ord(char) <= 122:
+        return (ord(char) - 32)
     else:
-        return False
+        return ord(char)
+
+
+def uppercase(string):
+    newString = ""
+    for char in string:
+        newString += "%c" % conversion(char)
+    print("{:s}".format(newString))
