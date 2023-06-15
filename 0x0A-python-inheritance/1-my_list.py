@@ -11,4 +11,6 @@ class MyList(list):
         '''
         prints the list, but sorted
         '''
-        print(sorted(self))
+        sorted_list = sorted(self)
+        for element in sorted_list:
+            print(element)
